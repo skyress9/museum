@@ -5,5 +5,6 @@
 * HTML5
 * SCSS/SASS
 * JavaScript
+* Webpack
 * Video API
 * Mapbox API
