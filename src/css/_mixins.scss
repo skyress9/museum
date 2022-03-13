@@ -1,5 +1,0 @@
-@mixin bp($br) {
-  @media (max-width: $br) {
-    @content;
-  }
-}
