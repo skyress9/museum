@@ -42,8 +42,8 @@
 
 .video__stream {
   display: block;
-  max-width: 1440px;
   width: 100%;
+  max-height: 650px;
   margin: 0 auto;
 
   object-fit: cover;
@@ -153,7 +153,7 @@
   @include bp(500px) {
     height: 101px;
   }
-  
+
   @include bp(401px) {
     height: 75px;
   }
@@ -289,7 +289,7 @@
 .video__input {
   height: 9px;
   margin: 0;
-  
+
   -webkit-appearance: none;
 
   @include bp(1200px) {
