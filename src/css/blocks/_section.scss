@@ -1,0 +1,262 @@
+.section {
+  padding: 75px 0;
+
+  @include bp(1200px) {
+    padding: 60px 0;
+  }
+
+  @include bp(850px) {
+    padding: 40px 0;
+  }
+}
+
+.dark-section {
+  background-color: $black;
+  
+}
+
+.video-section {
+  padding-top: 90px;
+}
+
+.section__preview {
+  min-height: 810px;
+  padding-top: 0;
+  padding-bottom: 61px;
+
+  @include bp(1200px) {
+    min-height: 585px;
+  }
+
+  @include bp(850px) {
+    padding-bottom: 0;
+    height: 861px;
+  }
+
+  @include bp(715px) {
+    height: 775px;
+  }
+
+  @include bp(650px) {
+    height: 726px;
+  }
+
+  @include bp(600px) {
+    height: 685px;
+  }
+
+  @include bp(550px) {
+    height: 650px;
+  }
+
+  @include bp(500px) {
+    height: 600px;
+  }
+
+  @include bp(420px) {
+    height: 544px;
+    min-height: 0;
+  }
+}
+
+.section__welcome {
+  position: relative;
+  z-index: 100;
+  left: 0;
+
+  transition: opacity .5s ease, left 1s ease-in-out;
+
+  &.active {
+    opacity: 0;
+    left: -100%;
+  }
+
+  @include bp(850px) {
+    text-align: center;
+  }
+
+  @include bp(500px) {
+    padding-top: 7px;
+  }
+}
+
+.section__visiting {
+  @include bp(850px) {
+    padding-bottom: 81px;
+  }
+
+  @include bp(500px) {
+    padding-bottom: 42px;
+  }
+}
+
+.section__video {
+  padding-bottom: 69px;
+
+  @include bp(1200px) {
+    padding-bottom: 54px;
+  }
+
+  @include bp(850px) {
+    padding-bottom: 74px;
+  }
+
+  @include bp(500px) {
+    padding-top: 36px;
+    padding-bottom: 33px;
+  }
+}
+
+.section__gallery {
+  padding-bottom: 0;
+}
+
+.section__tickets {
+  padding-bottom: 75px;
+
+  @include bp(1200px) {
+    padding-bottom: 59px;
+  }
+
+  @include bp(850px) {
+    padding-bottom: 40px;
+  }
+}
+
+.section__contacts {
+  padding-bottom: 75px;
+
+  @include bp(1200px) {
+    padding-bottom: 62px;
+  }
+
+  @include bp(850px) {
+    padding-bottom: 67px;
+  }
+
+  @include bp(500px) {
+    padding-bottom: 40px;
+  }
+}
+
+.section__inner {
+  position: relative;
+}
+
+.section__title {
+  font-family: $fforum;
+  font-size: $font1;
+  font-weight: 300;
+  line-height: 90px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+
+  span {
+    display: block;
+  }
+
+  @include bp(1200px) {
+    font-size: 50px;
+    line-height: 75px;
+  }
+
+  @include bp(850px) {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  @include bp(500px) {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+.section__title_welcome {
+  margin-bottom: 25px;
+  padding-top: 149px;
+  line-height: 90px;
+
+  @include bp(1200px) {
+    padding-top: 50px;
+  }
+
+  @include bp(850px) {
+    padding-top: 0;
+    line-height: 60px;
+  }
+
+  @include bp(500px) {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+.section__title_gold {
+  color: $font-gold;
+}
+
+.section__title_underline {
+  padding-bottom: 75px;
+  
+  &:after {
+    content: "";
+
+    display: block;
+    margin-top: 24px;
+    width: 100%;
+    height: 2px;
+    background-color: $dark-red;
+  }
+
+  @include bp(1200px) {
+    padding-bottom: 62px;
+
+    &:after {
+      margin-top: 20px;
+    }
+  }
+
+  @include bp(850px) {
+    padding-bottom: 41px;
+  }
+}
+
+.section__title_gallery {
+  margin-bottom: 75px;
+
+  @include bp(1200px) {
+    margin-bottom: 59px;
+  }
+
+  @include bp(850px) {
+    margin-bottom: 40px;
+  }
+}
+
+.section__subtitle {
+  margin-bottom: 75px;
+
+  font-size: $font3;
+  line-height: 33px;
+  letter-spacing: 2px;
+
+  @include bp(1200px) {
+    margin-bottom: 50px;
+
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  @include bp(850px) {
+    margin-bottom: 47px;
+    
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  @include bp(500px) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+

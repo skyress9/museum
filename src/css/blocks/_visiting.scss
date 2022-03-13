@@ -1,0 +1,134 @@
+.visiting__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 75px 20px;
+  justify-content: space-between;
+
+  @include bp(1410px) {
+    padding: 0 108px;
+    gap: 61px 20px;
+  }
+
+  @include bp(970px) {
+    padding: 0 56px;
+  }
+
+  @include bp(850px) {
+    gap: 38px 20px;
+  }
+
+  @include bp(735px) {
+    padding: 0 50px;
+    justify-content: center;
+    gap: 40px 20px;
+  }
+
+  @include bp(500px) {
+    gap: 39px 20px;
+  }
+}
+
+.visiting__item {
+  text-decoration: none;
+
+  &:hover {
+    .visiting__title:after {
+      width: 100%;
+    }
+  }
+
+  @include bp(1200px) {
+    max-width: 330px;
+  }
+
+  @include bp(850px) {
+    max-width: 280px;
+  }
+
+}
+
+.visiting__img {
+  width: 100%;
+  display: block;
+}
+
+.visiting__title {
+  margin-top: 25px;
+
+  font-family: $fforum;
+  color: $black;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  line-height: 35px;
+
+  &:after {
+    content: "";
+    margin-top: 10px;
+    display: block;
+    width: 68%;
+    height: 2px;
+    
+    background-color: $dark-red;
+
+    transition: width .4s ease-in-out;
+  }
+
+  @include bp(1200px) {
+    font-size: 28px;
+    line-height: 31px;
+    letter-spacing: 3px;
+
+    &:after {
+      width: 45%;
+    }
+  }
+
+  @include bp(850px) {
+    font-size: 22px;
+    line-height: 24px;
+
+    &:after {
+      width: 54%;
+    }
+  }
+
+  @include bp(500px) {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 5px;
+  }
+}
+
+.visiting__subtitle {
+  margin-top: 11px;
+
+  font-size: $font2;
+  color: $black;
+  
+  @include bp(1200px) {
+    font-size: 20px;
+    margin-top: 9px;
+  }
+
+  @include bp(850px) {
+    font-size: 18px;
+  }
+
+  @include bp(500px) {
+    font-size: 16px;
+  }
+}
+
+.visiting__text {
+  margin-top: 10px;
+
+  color: $black;
+  font-size: 18px;
+  font-weight: 200;
+
+  @include bp(1200px) {
+    font-size: 16px;
+  }
+}

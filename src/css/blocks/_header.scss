@@ -1,0 +1,69 @@
+.header {
+  position: relative;
+  z-index: 1000;
+
+  background-color: $black;
+}
+
+.header__container {
+  height: 150px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include bp(1200px) {
+    height: 130px;
+  }
+
+  
+  @include bp(850px) {
+    height: 110px;
+  }
+
+  @include bp(500px) {
+    height: 90px;
+  }
+}
+
+.header__logo {
+  display: flex;
+
+  @include bp(850px) {
+    align-items: center;
+  }
+}
+
+.header__img {
+  display: block;
+  width: 49px;
+  height: 26px;
+
+  background: url("../assets/svg/logo.svg"), center, no-repeat;
+
+  @include bp(500px) {
+    width: 29px;
+    height: 16px;
+    background-size: contain;
+  }
+}
+
+.header__text {
+  margin-left: 25px;
+
+  font-family: $fforum;
+  font-size: $font3;
+  font-weight: 400;
+  letter-spacing: 5px;
+  color: $white;
+  text-transform: uppercase;
+
+  @include bp(850px) {
+    padding-top: 12px;
+  }
+
+  @include bp(500px) {
+    padding-top: 4px;
+    font-size: 16px;
+  }
+}

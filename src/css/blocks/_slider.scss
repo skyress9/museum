@@ -1,0 +1,288 @@
+.slider__welcome {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 1000px;
+
+  @include bp(1200px) {
+    max-width: 700px;
+  }
+
+  @include bp(850px) {
+    position: static;
+
+
+    margin: 0 auto;
+    max-width: 728px;
+  }
+}
+
+.slider__video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+
+  @include bp(850px) {
+    margin-top: 10px;
+  }
+
+  @include bp(500px) {
+    margin-top: 30px;
+  }
+}
+
+.slider__line {
+  overflow: hidden;
+    
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%);
+  }
+
+  @include bp(850px) {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.slider__items {
+  display: flex;
+  position: relative;
+}
+
+.animated {
+  transition: transform .5s ease-in-out;;
+}
+
+.slider__controls {
+  position: absolute;
+  bottom: -60px;
+  right: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 75px 0 73px;
+  max-width: 600px;
+  max-height: 120px;
+  width: 100%;
+  height: 100%;
+
+  background-color: $black;
+
+  @include bp(1200px) {
+    max-width: 100%;
+    padding-left: 223px;
+  }
+
+  @include bp(850px) {
+    bottom: -100px;
+    max-height: 100px;
+
+    padding: 0 163px;
+  }
+
+  @include bp(715px) {
+    bottom: -50px;
+    padding: 0 80px;
+  }
+
+  @include bp(650px) {
+    max-height: 70px;
+  }
+
+  @include bp(600px) {
+    padding: 0 60px;
+  }
+
+  @include bp(500px) {
+    bottom: -76px;
+    
+    padding: 0 76px;
+  }
+
+  @include bp(401px) {
+    padding: 0 15px;
+  }
+}
+
+.slider__num {
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+
+  @include bp(850px) {
+    font-size: 20px;
+  }
+
+  @include bp(650px) {
+    font-size: 18px;
+  }
+
+  @include bp(500px) {
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+}
+
+.slider__dots {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.slider__dots_welcome {
+  max-width: 180px;
+  width: 100%;
+  margin-right: 7px;
+  margin-bottom: 3px;
+  
+  @include bp(1200px) {
+    margin: 0;
+    max-width: 160px;
+  }
+
+  @include bp(500px) {
+    max-width: 76px;
+  }
+}
+
+.slider__dots_video {
+  margin: 0 17px;
+  padding-top: 1px;
+
+}
+
+.slider__dot {
+  display: inline-block;
+
+  cursor: pointer;
+
+  transition: background-color .2s ease-in-out;
+}
+
+.slider__dot_welcome {
+  width: 16px;
+  height: 16px;
+  background-color: $white;
+
+  &.active {
+    background-color: #D2B183;
+  }
+  
+  &:hover {
+    background-color: $font-gold;
+  }
+
+  @include bp(1200px) {
+    width: 12px;
+    height: 12px;
+  }
+
+  @include bp(600px) {
+    width: 9px;
+    height: 9px;
+  }
+
+  @include bp(500px) {
+    width: 7px;
+    height: 7px;
+  }
+}
+
+.slider__dot_video {
+  width: 12px;
+  height: 12px;
+  background-color: #999;
+  border-radius: 50%;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    background-color: $dark-red;
+  }
+
+  @include bp(850px) {
+    width: 10px;
+    height: 10px;
+  }
+
+  @include bp(500px) {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.tns-nav-active {
+  background-color: #333;
+}
+
+.slider__buttons {
+  display: flex;
+  max-width: 80px;
+  padding-bottom: 6px;
+  width: 100%;
+  justify-content: space-between;
+
+  @include bp(500px) {
+    max-width: 54px;
+  }
+}
+
+.slider__button {
+  cursor: pointer;
+  padding: 0;
+
+  border: none;
+
+  transition: color .2s ease-in-out;
+}
+
+.slider__button_welcome {
+  background-color: $black;
+  color: $white;
+  font-size: 30px;
+
+  &:hover {
+    color: $font-gold;
+  }
+
+  @include bp(600px) {
+    font-size: 26px;
+  }
+
+  @include bp(500px) {
+    font-size: 22px;
+  }
+}
+
+.slider__button_video {
+  font-size: 24px;
+  color: #999;
+  background-color: $white;
+
+  &:hover {
+    color: $dark-red;
+  }
+
+  @include bp(500px) {
+    font-size: 22px;
+  }
+}
